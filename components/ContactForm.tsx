@@ -1,7 +1,6 @@
 'use client';
 
 import { useState, FormEvent } from 'react';
-import { motion } from 'framer-motion';
 import { Send, CheckCircle, Sparkles, Zap, Heart } from 'lucide-react';
 
 export default function ContactForm() {
@@ -50,12 +49,7 @@ export default function ContactForm() {
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 relative">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left side - Content */}
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
+          <div>
             <span className="inline-flex items-center gap-2 text-emerald-400 font-semibold text-sm uppercase tracking-wider mb-4">
               <Sparkles className="w-4 h-4" />
               Join the Adventure
@@ -88,15 +82,10 @@ export default function ContactForm() {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </div>
 
           {/* Right side - Form */}
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-          >
+          <div>
             {status === 'success' ? (
               <div className="bg-white rounded-2xl shadow-sm border border-slate-100 p-10 text-center">
                 <div className="w-16 h-16 bg-emerald-400/20 rounded-full flex items-center justify-center mx-auto mb-6">
@@ -173,9 +162,9 @@ export default function ContactForm() {
                 </p>
               </form>
             )}
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>
-  </div></div>);
+  );
 }
