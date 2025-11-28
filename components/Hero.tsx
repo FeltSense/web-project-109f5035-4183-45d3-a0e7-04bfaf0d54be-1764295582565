@@ -1,7 +1,5 @@
 'use client';
 
-import { motion } from 'framer-motion';
-import Image from 'next/image';
 import { Sparkles, Brain, Gamepad2, TrendingUp } from 'lucide-react';
 
 export default function Hero() {
@@ -17,12 +15,7 @@ export default function Hero() {
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 relative z-10 py-24 md:py-32">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Text Content */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center lg:text-left"
-          >
+          <div className="text-center lg:text-left">
             <div className="inline-flex items-center gap-2 bg-violet-600/10 border border-violet-600/20 rounded-full px-4 py-2 mb-8">
               <Sparkles className="w-4 h-4 text-emerald-400" />
               <span className="text-violet-300 text-sm font-medium">AI-Powered Learning Companions</span>
@@ -34,7 +27,7 @@ export default function Hero() {
             </h1>
             
             <p className="text-xl text-slate-400 max-w-xl mx-auto lg:mx-0 mb-10 leading-relaxed">
-              Smart toys that adapt to your child's learning style. Real-time progress tracking. Skills that last a lifetime.
+              Smart toys that adapt to your child&apos;s learning style. Real-time progress tracking. Skills that last a lifetime.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
@@ -63,15 +56,10 @@ export default function Hero() {
                 <p className="text-sm text-slate-500">Designed For</p>
               </div>
             </div>
-          </motion.div>
+          </div>
 
           {/* Dashboard Preview */}
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="relative"
-          >
+          <div className="relative">
             {/* Main Dashboard Card */}
             <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl border border-slate-800 p-6 shadow-2xl">
               {/* Dashboard Header */}
@@ -81,7 +69,7 @@ export default function Hero() {
                     <span className="text-white font-bold text-sm">E</span>
                   </div>
                   <div>
-                    <p className="text-white font-semibold">Emma's Progress</p>
+                    <p className="text-white font-semibold">Emma&apos;s Progress</p>
                     <p className="text-slate-500 text-sm">Age 7 • Level 12</p>
                   </div>
                 </div>
@@ -127,23 +115,21 @@ export default function Hero() {
 
               {/* Recent Activity */}
               <div className="bg-slate-800/50 rounded-xl p-4">
-                <p className="text-slate-400 text-xs uppercase tracking-wider mb-3">Today's Achievements</p>
+                <p className="text-slate-400 text-xs uppercase tracking-wider mb-3">Today&apos;s Achievements</p>
                 <div className="flex items-center gap-3">
                   <div className="w-8 h-8 rounded-lg bg-violet-600/20 flex items-center justify-center">
                     <Sparkles className="w-4 h-4 text-violet-400" />
                   </div>
                   <div>
-                    <p className="text-white text-sm font-medium">Completed "Space Explorer" Quest</p>
+                    <p className="text-white text-sm font-medium">Completed &quot;Space Explorer&quot; Quest</p>
                     <p className="text-slate-500 text-xs">+150 XP • 2 hours ago</p>
-                  </div></div>
+                  </div>
+                </div>
+              </div>
+            </div>
 
             {/* Floating Stats Card */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.6 }}
-              className="absolute -bottom-6 -left-6 bg-white rounded-xl p-4 shadow-lg border border-slate-100"
-            >
+            <div className="absolute -bottom-6 -left-6 bg-white rounded-xl p-4 shadow-lg border border-slate-100">
               <div className="flex items-center gap-3">
                 <div className="w-12 h-12 rounded-full bg-emerald-400/10 flex items-center justify-center">
                   <TrendingUp className="w-6 h-6 text-emerald-500" />
@@ -153,20 +139,15 @@ export default function Hero() {
                   <p className="text-slate-500 text-sm">Learning Speed</p>
                 </div>
               </div>
-            </motion.div>
+            </div>
 
             {/* Floating Notification */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5, delay: 0.8 }}
-              className="absolute -top-4 -right-4 bg-violet-600 rounded-xl px-4 py-3 shadow-lg"
-            >
+            <div className="absolute -top-4 -right-4 bg-violet-600 rounded-xl px-4 py-3 shadow-lg">
               <p className="text-white text-sm font-medium">🎉 New Badge Unlocked!</p>
-            </motion.div>
-          </motion.div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
-  </div></div></div></div></div></div></div></div></div></div>);
+  );
 }
